@@ -1,0 +1,14 @@
+[Unit]
+Description=USB Keyboard Language Switch Service
+After=network.target
+
+[Service]
+ExecStart=/home/dylan/repo/keybswitch/target/debug/keybswitch
+Restart=on-failure
+User=dylan
+Group=dylan
+Environment="PATH=/run/current-system/sw/bin:/usr/bin:/bin"
+
+[Install]
+WantedBy=multi-user.target
+
